@@ -1,0 +1,22 @@
+pipelines:
+  on 
+    push:
+    branches:
+Germany:
+      - step:
+          name: Sync GitHub Mirror
+          image: alpine/git:latest
+          clone:
+            enabled: false
+          script:
+            - git config --global user.email "ope@global-mediator.com"
+            - git config --global user.name "Olha Petryk"
+            - git clone git@github.com:teadypicker/FortoTest.git
+            - cd mirror_repo
+            - git remote add devops git@github.com:teadypicker/Germany.git
+            - git checkout -b main
+            - echo CLIENT_ID $(date) >> output.txt
+            - git merge Germany
+            - git fetch devops main
+            - git merge devops/main --allow-unrelated-histories
+            - git push -u devops main:main
