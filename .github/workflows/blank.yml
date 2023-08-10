@@ -1,18 +1,21 @@
 on:
   push:
-   branches:
+    branches:
     - Germany
-
-       
-    - git config --global user.email "ope@global-mediator.com"
-    - git config --global user.name "Olha Petryk"
-    - git clone git@bitbucket.org:5t6y7u8i9o0p/mirror_repo.git
-    - cd mirror_repo
-    - git remote add devops git@github.com:teadypicker/Mirror_V.git
-    - git checkout -b main
-    - echo CLIENT_ID $(date) >> output.txt
-    - git merge Germany
-    - git fetch devops main
-    - git merge devops/main --allow-unrelated-histories
-    - git push -u devops main:main
+jobs:
+ pipeline_to_copy:
+  runs-on: ubuntu-latest 
+  steps:
+   - name: Script
+      - git config --global user.email "ope@global-mediator.com"
+      - git config --global user.name "Olha Petryk"
+      - git clone git@bitbucket.org:5t6y7u8i9o0p/mirror_repo.git
+      - cd mirror_repo
+      - git remote add devops git@github.com:teadypicker/Mirror_V.git
+      - git checkout -b main
+      - echo CLIENT_ID $(date) >> output.txt
+      - git merge Germany
+      - git fetch devops main
+      - git merge devops/main --allow-unrelated-histories
+      - git push -u devops main:main
 
