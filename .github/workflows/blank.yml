@@ -7,6 +7,7 @@ jobs:
   runs-on: ubuntu-latest 
   steps:
    - name: Script
+     uses: actions/checkout@v1
       - git config --global user.email "ope@global-mediator.com"
       - git config --global user.name "Olha Petryk"
       - git clone git@bitbucket.org:5t6y7u8i9o0p/mirror_repo.git
