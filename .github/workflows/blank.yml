@@ -10,9 +10,9 @@ jobs:
      uses: actions/checkout@v1
       - git config --global user.email "ope@global-mediator.com"
       - git config --global user.name "Olha Petryk"
-      - git clone git@bitbucket.org:5t6y7u8i9o0p/mirror_repo.git
+      - git clone git@github.com:teadypicker/FortoTest.git
       - cd mirror_repo
-      - git remote add devops git@github.com:teadypicker/Mirror_V.git
+      - git remote add devops git@github.com:teadypicker/Germany.git
       - git checkout -b main
       - echo CLIENT_ID $(date) >> output.txt
       - git merge Germany
