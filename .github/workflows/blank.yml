@@ -1,6 +1,6 @@
 pipelines:
   on 
-    push:
+  push:
     branches:
 Germany:
       - step:
