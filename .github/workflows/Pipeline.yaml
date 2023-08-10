@@ -9,13 +9,11 @@ jobs:
   steps:
    - name: Script
      run: 
-          $git config --global user.email "ope@global-mediator.com"
-          $git config --global user.name "Olha Petryk"
-          $git clone git@github.com:teadypicker/FortoTest.git
+          git clone git@github.com:teadypicker/FortoTest.git
           cd mirror_repo
-          $git remote add devops git@github.com:teadypicker/Germany.git
-          $git checkout -b main
-          $git merge Germany
-          $git fetch devops main
-          $git merge devops/main --allow-unrelated-histories
-          $git push -u devops main:main
+          git remote add devops git@github.com:teadypicker/Germany.git
+          git checkout -b main
+          git merge Germany
+          git fetch devops main
+          git merge devops/main --allow-unrelated-histories
+          git push -u devops main:main
