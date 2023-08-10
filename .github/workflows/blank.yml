@@ -1,13 +1,8 @@
 pipelines:
-  on 
-  push:
-    branches:
-Germany:
-      - step:
-          name: Sync GitHub Mirror
-          image: alpine/git:latest
-          clone:
-            enabled: false
+       on:
+        push:
+        branches:
+          - Germany
           script:
             - git config --global user.email "ope@global-mediator.com"
             - git config --global user.name "Olha Petryk"
