@@ -9,5 +9,4 @@ jobs:
   steps:
    - name: Script
      run:
-        git config --global user.name "${{ Olha Petryk }}"
         git config --global user.email "ope@global-mediator.com"
