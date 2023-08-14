@@ -19,7 +19,7 @@ jobs:
    - name: Checkout Germany
      uses: actions/checkout@v3
      with:
-      repository: teadypicker/Germany.git
+      repository: teadypicker/Germany
       token: ${{ secrets.FortoToken }} 
       path: Germany
 
