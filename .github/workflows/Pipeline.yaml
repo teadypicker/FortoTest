@@ -14,7 +14,7 @@ jobs:
      with:
             fetch-depth: 0
             ref: Germany
-            path: FotroTest
+            path: FortoTest
 
    - name: Checkout Germany
      uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
    - name: Copy files from Main to Germany
      run: |
         cd Germany
-        cp -r ../FotroTest/* .
+        cp -r ../FortoTest/* .
         git config user.name ope
         git config user.email ope@global-mediator.com
         git add .
