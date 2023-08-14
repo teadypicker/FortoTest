@@ -24,6 +24,7 @@ jobs:
       path: Germany
 
    - name: Copy files from Main to Germany
+     uses: actions/checkout@v3
    - run: 
           git config user.name ope
           git config user.email ope@global-mediator.com
