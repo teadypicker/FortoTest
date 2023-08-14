@@ -24,8 +24,7 @@ jobs:
       path: Germany
 
    - name: Copy files from Main to Germany
-     uses: actions/checkout@v3
-   - run: 
+     run:
         cd Germany
         cp -r ../FotroTest/* .
         git config user.name ope
