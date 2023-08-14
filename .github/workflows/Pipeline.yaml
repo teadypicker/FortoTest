@@ -1,3 +1,5 @@
+name: Copy Files to Germany
+
 on:
 
   push:
@@ -7,14 +9,27 @@ jobs:
  pipeline_to_copy:
   runs-on: ubuntu-latest 
   steps:
-   - name: Script
-     run:
-        git config --global user.email "ope@global-mediator.com"
-        git clone git@github.com:teadypicker/FortoTest.git
-        cd Germany
-        git remote add devops git@github.com:teadypicker/Germany.git
-        git checkout -b main
-        git merge Germany
-        git fetch devops main
-        git merge devops/main 
-        git push -u devops main:main
+   - name: Checkout GitHub action Main repo
+     uses: actions/checkout@v3
+     with:
+            fetch-depth: 0
+            ref: Germany
+            path: FotroTest
+
+   - name: Checkout Germany
+     uses: actions/checkout@v3
+     with:
+      repository: teadypicker/Germany.git
+      token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      path: Germany
+
+   - name: Copy files from Main to Germany
+   - run: 
+          git config user.name ope
+          git config user.email ope@global-mediator.com
+          git add .
+          git commit -m "Copied to Repo"
+          git push
+   
+    
+
