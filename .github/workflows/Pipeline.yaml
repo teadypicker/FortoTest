@@ -26,6 +26,8 @@ jobs:
    - name: Copy files from Main to Germany
      uses: actions/checkout@v3
    - run: 
+          cd Germany
+          cp -r ../FortoTest/* .
           git config user.name ope
           git config user.email ope@global-mediator.com
           git add .
