@@ -1,7 +1,9 @@
-﻿{
-    "type":  "AppSource App",
-    "templateUrl":  "https://github.com/microsoft/AL-Go-AppSource@main",
+﻿
+{
+    "type":  "PTE",
+    "templateUrl":  "https://github.com/microsoft/AL-Go-PTE@main"
+
     "environments":  [
-                         "TestGit"
+                         "Sandbox"
                      ]
 }
