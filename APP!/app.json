@@ -1,0 +1,33 @@
+﻿{
+    "id":  "475fc47f-925c-4c7e-af7e-4dbc2e8a9025",
+    "name":  "APP!",
+    "publisher":  "Petryk",
+    "version":  "1.1.0.0",
+    "brief":  "",
+    "description":  "",
+    "privacyStatement":  "",
+    "EULA":  "",
+    "help":  "",
+    "url":  "",
+    "logo":  "",
+    "runtime":  "10.0",
+    "dependencies":  [
+
+                     ],
+    "screenshots":  [
+
+                    ],
+    "platform":  "1.0.0.0",
+    "application":  "19.0.0.0",
+    "idRanges":  [
+                     {
+                         "from":  51000,
+                         "to":  70000
+                     }
+                 ],
+    "resourceExposurePolicy":  {
+                                   "allowDebugging":  true,
+                                   "allowDownloadingSource":  false,
+                                   "includeSourceInSymbolFile":  false
+                               }
+}
