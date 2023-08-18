@@ -2,6 +2,6 @@
     "type":  "AppSource App",
     "templateUrl":  "https://github.com/microsoft/AL-Go-AppSource@main",
     "environments":  [
-                         "TestGit"
+                         "Sandbox"
                      ]
 }
