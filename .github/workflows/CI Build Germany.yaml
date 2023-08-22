@@ -1,0 +1,35 @@
+name: Copy Files to Germany
+
+on:
+
+  push:
+    branches:
+    - Germany
+jobs:
+ pipeline_to_copy:
+  runs-on: ubuntu-latest 
+  steps:
+   - name: Checkout GitHub action Main repo
+     uses: actions/checkout@v3
+     with:
+            fetch-depth: 0
+            ref: Germany
+            path: FotroTest
+
+   - name: Checkout Germany
+     uses: actions/checkout@v3
+     with:
+      repository: teadypicker/Germany
+      token: ${{ secrets.FortoToken }} 
+      path: Germany
+
+   - name: Copy files from Main to Germany
+     run: |
+        cd Germany
+        cp -r ../FotroTest/* .
+        git config user.name ope
+        git config user.email ope@global-mediator.com
+        git add .
+        git commit -m "Copied to Repo"
+        git push
+   
